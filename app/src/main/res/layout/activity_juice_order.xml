@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context="id.apuse.fin.JuiceOrder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textSize="16sp"
+            android:textAllCaps="true"/>
+
+        <LinearLayout
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:textSize="32sp"
+                android:text="-"
+                android:onClick="decrement"
+                android:background="#fff"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif-light"/>
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="56sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                android:text="0"/>
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:textSize="32sp"
+                android:text="+"
+                android:onClick="increment"
+                android:background="#fff"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif-light"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="#fe32343e"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp"
+            android:textAllCaps="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Price"
+            android:textSize="16sp"
+            android:textAllCaps="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Rp0"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="46dp"
+            android:textColor="#ffffff"
+            android:textSize="32sp"
+            android:text="Order"
+            android:fontFamily="sans-serif-light"
+            android:background="@color/b5"
+            android:onClick="submitOrder"/>
+
+    </LinearLayout>
+
+</LinearLayout>
